@@ -13,14 +13,15 @@ public class  AdjacencyGraph {
     //tilføjer edge eller retunere med en fejlkode hvis paramtre ikke er mødt
     public void addEdge(Vertex from,Vertex to, Integer weight){
         if(!(vertices.contains(from) && vertices.contains(to)) ) {
-            System.out.println(" com.company.Vertex not in graph");
+            System.out.println(" Vertex not in graph");
             return;
         }
         Edge e=new Edge(from, to,weight);
     }
 
     public void MSTPrims(){
-        int Distance;
+        int dest;
+        int preDistance;
 
     }
 
