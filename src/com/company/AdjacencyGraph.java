@@ -1,6 +1,8 @@
+package com.company;
+
 import java.util.ArrayList;
 
-public class AdjacencyGraph {
+public class  AdjacencyGraph {
     ArrayList<Vertex> vertices;
     public AdjacencyGraph(){
         vertices=new ArrayList<Vertex>();
@@ -11,15 +13,21 @@ public class AdjacencyGraph {
     //tilføjer edge eller retunere med en fejlkode hvis paramtre ikke er mødt
     public void addEdge(Vertex from,Vertex to, Integer weight){
         if(!(vertices.contains(from) && vertices.contains(to)) ) {
-            System.out.println(" Vertex not in graph");
+            System.out.println(" com.company.Vertex not in graph");
             return;
         }
         Edge e=new Edge(from, to,weight);
     }
+
+    public void MSTPrims(){
+        int Distance;
+
+    }
+
     public  void PrintGraph(){
         for (int i=0;i<vertices.size();i++)
         {
-            System.out.println(" From Vertex: "+ vertices.get(i).name);
+            System.out.println(" From com.company.Vertex: "+ vertices.get(i).name);
             Vertex currentfrom=vertices.get(i);
             for(int j=0; j<currentfrom.OutEdges.size();j++){
                 Edge currentEdge=currentfrom.OutEdges.get(j);
